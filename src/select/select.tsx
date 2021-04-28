@@ -39,7 +39,7 @@ export const Select: React.FunctionComponent<SelectProps> = ({
           className='select-dropdown dropdown-trigger'
           type='text'
           readOnly
-          value={props.value}
+          value={props.value || props.placeholder}
         />
         <ul
           className={classNames('dropdown-content', 'select-dropdown', {

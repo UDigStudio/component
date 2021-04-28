@@ -88,7 +88,7 @@ var Select = function Select(_ref) {
     className: 'select-dropdown dropdown-trigger',
     type: 'text',
     readOnly: true,
-    value: props.value
+    value: props.value || props.placeholder
   }), createElement("ul", {
     className: classNames('dropdown-content', 'select-dropdown', (_classNames = {}, _classNames[styles$1.open] = showOptions, _classNames))
   }, options.map(function (_ref2) {
