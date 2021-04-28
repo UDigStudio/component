@@ -31,7 +31,7 @@ export const Select: React.FunctionComponent<SelectProps> = ({
   const [showOptions, setShowOptions] = React.useState<boolean>(false)
   return (
     <div
-      className={classNames('input-field', 'relative', className)}
+      className={classNames(styles.relative, className)}
       onClick={() => setShowOptions(!showOptions)}
     >
       <div className='select-wrapper'>
