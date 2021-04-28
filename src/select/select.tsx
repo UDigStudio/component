@@ -53,9 +53,12 @@ export const Select: React.FunctionComponent<SelectProps> = ({
                 disabled: disabled,
                 selected: value === props.value
               })}
-              onClick={() => {
-                onChange(value)
-                setShowOptions(false)
+              onClick={(event) => {
+                event.stopPropagation()
+                if (!disabled) {
+                  onChange(value)
+                  setShowOptions(false)
+                }
               }}
             >
               <span>{label}</span>

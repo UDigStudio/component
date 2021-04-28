@@ -103,9 +103,13 @@ var Select = function Select(_ref) {
         disabled: disabled,
         selected: value === props.value
       }),
-      onClick: function onClick() {
-        onChange(value);
-        setShowOptions(false);
+      onClick: function onClick(event) {
+        event.stopPropagation();
+
+        if (!disabled) {
+          onChange(value);
+          setShowOptions(false);
+        }
       }
     }, React.createElement("span", null, label));
   })), React.createElement("svg", {

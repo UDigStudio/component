@@ -101,9 +101,13 @@ var Select = function Select(_ref) {
         disabled: disabled,
         selected: value === props.value
       }),
-      onClick: function onClick() {
-        onChange(value);
-        setShowOptions(false);
+      onClick: function onClick(event) {
+        event.stopPropagation();
+
+        if (!disabled) {
+          onChange(value);
+          setShowOptions(false);
+        }
       }
     }, createElement("span", null, label));
   })), createElement("svg", {

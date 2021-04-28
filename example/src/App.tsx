@@ -11,7 +11,8 @@ const App = () => {
     input: <Text value={value} onChange={(newValue: string) => setValue(newValue)} />
     select: <Select onChange={(newValue: string) => setSelectValue(newValue)} value={selectValue} options={[
       { value: 1, label: '1' },
-      { value: 2, label: '2' }
+      { value: 2, label: '2' },
+      { value: 3, label: '3', disabled: true }
     ]} placeholder="test" />
   </>
 }
