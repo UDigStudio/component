@@ -9,7 +9,7 @@ const App = () => {
   return <Container>
     <ExampleComponent text={value} />
     <Row>
-      <Large>k
+      <Large>
         input: <Text value={value} onChange={(newValue: string) => setValue(newValue)} />
       </Large>
       <Large>
