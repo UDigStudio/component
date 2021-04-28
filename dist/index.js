@@ -134,6 +134,48 @@ var Select = function Select(_ref) {
   }))));
 };
 
+var Row = function Row(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'row'
+  }, children);
+};
+
+var Small = function Small(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'col s6 m3 l1'
+  }, children);
+};
+
+var Medium = function Medium(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'col s8 m5 l3'
+  }, children);
+};
+
+var Large = function Large(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'col s10 m7 l5'
+  }, children);
+};
+
+var ExtraLarge = function ExtraLarge(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'col s12 m8 l7'
+  }, children);
+};
+
+var Container = function Container(_ref) {
+  var children = _ref.children;
+  return React.createElement("div", {
+    className: 'container'
+  }, children);
+};
+
 var ExampleComponent = function ExampleComponent(_ref) {
   var text = _ref.text;
   return React.createElement("div", {
@@ -141,7 +183,13 @@ var ExampleComponent = function ExampleComponent(_ref) {
   }, "Example Component: ", text);
 };
 
+exports.Container = Container;
 exports.ExampleComponent = ExampleComponent;
+exports.ExtraLarge = ExtraLarge;
+exports.Large = Large;
+exports.Medium = Medium;
+exports.Row = Row;
 exports.Select = Select;
+exports.Small = Small;
 exports.Text = Text;
 //# sourceMappingURL=index.js.map

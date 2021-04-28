@@ -92,6 +92,46 @@ const Select = ({
   }, label)))));
 };
 
+const Row = ({
+  children
+}) => {
+  return createElement("div", {
+    className: 'row'
+  }, children);
+};
+
+const Small = ({
+  children
+}) => createElement("div", {
+  className: 'col s6 m3 l1'
+}, children);
+
+const Medium = ({
+  children
+}) => createElement("div", {
+  className: 'col s8 m5 l3'
+}, children);
+
+const Large = ({
+  children
+}) => createElement("div", {
+  className: 'col s10 m7 l5'
+}, children);
+
+const ExtraLarge = ({
+  children
+}) => createElement("div", {
+  className: 'col s12 m8 l7'
+}, children);
+
+const Container = ({
+  children
+}) => {
+  return createElement("div", {
+    className: 'container'
+  }, children);
+};
+
 const ExampleComponent = ({
   text
 }) => {
@@ -100,5 +140,5 @@ const ExampleComponent = ({
   }, "Example Component: ", text);
 };
 
-export { ExampleComponent, Select, Text };
+export { Container, ExampleComponent, ExtraLarge, Large, Medium, Row, Select, Small, Text };
 //# sourceMappingURL=index.modern.js.map
