@@ -1,6 +1,6 @@
 /* add css module styles here (optional) */
 
-._3ybTi {
+._styles-module__test__3ybTi {
   margin: 2em;
   padding: 0.5em;
   border: 2px solid #000;
@@ -8,7 +8,7 @@
   text-align: center;
 }
 
-._yvfWs {
+._select-module__open__yvfWs {
   display: block;
   left: 0px;
   top: 0px;
@@ -19,6 +19,6 @@
   transform: scaleX(1) scaleY(1);
 }
 
-._2tynv {
+._select-module__relative__2tynv {
   position: relative;
 }

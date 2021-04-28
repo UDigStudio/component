@@ -4,7 +4,7 @@ var React = require('react');
 var classNames = _interopDefault(require('classnames'));
 require('materialize-css/dist/css/materialize.css');
 
-var styles = {"test":"_3ybTi"};
+var styles = {"test":"_styles-module__test__3ybTi"};
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -57,7 +57,7 @@ var Text = function Text(_ref) {
   return React.createElement("input", Object.assign({}, componentProps));
 };
 
-var styles$1 = {"open":"_yvfWs","relative":"_2tynv"};
+var styles$1 = {"open":"_select-module__open__yvfWs","relative":"_select-module__relative__2tynv"};
 
 var Select = function Select(_ref) {
   var _classNames;
