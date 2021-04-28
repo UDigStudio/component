@@ -103,25 +103,25 @@ const Row = ({
 const Small = ({
   children
 }) => createElement("div", {
-  className: 'col s6 m3 l1'
+  className: 'col s6 m4 l2'
 }, children);
 
 const Medium = ({
   children
 }) => createElement("div", {
-  className: 'col s8 m5 l3'
+  className: 'col s8 m6 l4'
 }, children);
 
 const Large = ({
   children
 }) => createElement("div", {
-  className: 'col s10 m7 l5'
+  className: 'col s10 m8 l6'
 }, children);
 
 const ExtraLarge = ({
   children
 }) => createElement("div", {
-  className: 'col s12 m8 l7'
+  className: 'col s12 m10 l8'
 }, children);
 
 const Container = ({

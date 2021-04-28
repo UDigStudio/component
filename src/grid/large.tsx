@@ -6,4 +6,4 @@ export interface LargeProps extends ParentComponent {}
 
 export const Large: React.FunctionComponent<LargeProps> = ({
   children
-}: LargeProps) => <div className='col s10 m7 l5'>{children}</div>
+}: LargeProps) => <div className='col s10 m8 l6'>{children}</div>

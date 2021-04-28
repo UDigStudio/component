@@ -144,28 +144,28 @@ var Row = function Row(_ref) {
 var Small = function Small(_ref) {
   var children = _ref.children;
   return React.createElement("div", {
-    className: 'col s6 m3 l1'
+    className: 'col s6 m4 l2'
   }, children);
 };
 
 var Medium = function Medium(_ref) {
   var children = _ref.children;
   return React.createElement("div", {
-    className: 'col s8 m5 l3'
+    className: 'col s8 m6 l4'
   }, children);
 };
 
 var Large = function Large(_ref) {
   var children = _ref.children;
   return React.createElement("div", {
-    className: 'col s10 m7 l5'
+    className: 'col s10 m8 l6'
   }, children);
 };
 
 var ExtraLarge = function ExtraLarge(_ref) {
   var children = _ref.children;
   return React.createElement("div", {
-    className: 'col s12 m8 l7'
+    className: 'col s12 m10 l8'
   }, children);
 };
 
