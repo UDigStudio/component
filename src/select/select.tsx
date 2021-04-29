@@ -16,7 +16,8 @@ export interface SelectProps
 }
 
 export const Select = React.forwardRef(
-  ({ onChange, className, options, ...props }: SelectProps) => {
+  ({ onChange, className, options, ...props }: SelectProps, ref) => {
+    React.useRef(ref)
     const change = (event: React.ChangeEvent<HTMLSelectElement>) => {
       onChange(event.currentTarget.value)
     }
@@ -73,11 +74,7 @@ export const Select = React.forwardRef(
           </svg>
           <select {...componentProps}>
             {options.map(({ value, label }) => (
-              <option
-                key={value}
-                value={value}
-                selected={props.value === value}
-              >
+              <option key={value} value={value}>
                 {label}
               </option>
             ))}

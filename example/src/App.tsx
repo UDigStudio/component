@@ -10,7 +10,7 @@ const MyForm = FormHoc<{
   name: 'my-form',
   defaultValues: {
     text: "Create React Library Example 😄",
-    select: null,
+    select: '',
   }
 });
 

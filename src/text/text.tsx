@@ -10,7 +10,8 @@ export interface TextProps
 }
 
 export const Text = React.forwardRef(
-  ({ onChange, className, ...props }: TextProps) => {
+  ({ onChange, className, ...props }: TextProps, ref) => {
+    React.useRef(ref)
     const change = (event: React.SyntheticEvent<HTMLInputElement>) => {
       onChange(event.currentTarget.value)
     }
