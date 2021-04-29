@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { ExampleComponent, Text, Select, Row, Small, ExtraLarge, Large, Medium, Container, FormHoc } from 'component'
+import { ExampleComponent, ControlledText, ControlledSelect, Row, Small, ExtraLarge, Large, Medium, Container, FormHoc } from 'component'
 import 'component/dist/index.css'
 
 const MyForm = FormHoc<{
@@ -9,29 +9,30 @@ const MyForm = FormHoc<{
 }>({
   name: 'my-form',
   defaultValues: {
-    text: '',
+    text: "Create React Library Example 😄",
     select: null,
   }
 });
 
 const App = () => {
-  const [value, setValue] = useState("Create React Library Example 😄");
-  const [selectValue, setSelectValue] = useState<string>();
   return <Container>
-    <ExampleComponent text={value} />
+    <ExampleComponent text={"Create React Library Example 😄"} />
     <MyForm>
       <Row>
         <Large>
-          <label>input: </label>
-          <Text name='text' value={value} onChange={(newValue: string) => setValue(newValue)} />
+          <ControlledText name='text' label='text' />
         </Large>
         <Large>
-          <label>select: </label>
-          <Select name='select' onChange={(newValue: string) => setSelectValue(newValue)} value={selectValue} options={[
-            { value: 1, label: '1' },
-            { value: 2, label: '2' },
-            { value: 3, label: '3', disabled: true }
-          ]} placeholder="test" />
+          <ControlledSelect
+            name='select'
+            label='select'
+            options={[
+              { value: 1, label: '1' },
+              { value: 2, label: '2' },
+              { value: 3, label: '3', disabled: true }
+            ]}
+            placeholder='select an option'
+          />
         </Large>
       </Row>
       <Row>

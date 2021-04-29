@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FormProvider, useForm } from 'react-hook-form'
+import { FormProvider, useForm, useWatch } from 'react-hook-form'
 
 export interface FormHocProps<FormType> {
   name: string
@@ -18,6 +18,12 @@ export const FormHoc = <FormType extends Object>({
   const methods = useForm<any & FormType>({
     defaultValues
   })
+  const values = useWatch({
+    control: methods.control
+  })
+  React.useEffect(() => {
+    console.log('values: ', values)
+  }, [values])
   return (
     <FormProvider {...methods}>
       <form {...props} name={name} onSubmit={(event) => event.preventDefault()}>
