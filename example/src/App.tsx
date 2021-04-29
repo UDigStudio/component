@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import {
   ExampleComponent,
-  Text,
-  Select,
+  ControlledText,
+  ControlledSelect,
   Row,
   Small,
   ExtraLarge,
   Large,
   Medium,
   Container,
-  Card,
   FormHoc,
+  Card,
 } from 'component'
 import 'component/dist/index.css'
 
@@ -21,41 +21,31 @@ const MyForm = FormHoc<{
 }>({
   name: 'my-form',
   defaultValues: {
-    text: '',
-    select: null
+    text: "Create React Library Example 😄",
+    select: '',
   }
 })
 
 const App = () => {
-  const [value, setValue] = useState('Create React Library Example 😄')
-  const [selectValue, setSelectValue] = useState<string>()
-  return (
-    <Container>
-      <ExampleComponent text={value} />
-      <MyForm>
+  return <Container>
+    <ExampleComponent text={"Create React Library Example 😄"} />
+    <MyForm>
+      <Card>
         <Row>
           <Large>
-            <label>input: </label>
-            <Text
-              value={value}
-              onChange={(newValue: string) => setValue(newValue)}
-            />
+            <ControlledText name='text' label='text' />
           </Large>
           <Large>
-            <label>select: </label>
-            <Select
-              onChange={(newValue: string) => setSelectValue(newValue)}
-              value={selectValue}
+            <ControlledSelect
+              name='select'
+              label='select'
               options={[
                 { value: 1, label: '1' },
                 { value: 2, label: '2' },
                 { value: 3, label: '3', disabled: true }
               ]}
-              placeholder='test'
+              placeholder='select an option'
             />
-          </Large>
-          <Large>
-            <Card>Hello world</Card>
           </Large>
         </Row>
         <Row>
@@ -64,9 +54,9 @@ const App = () => {
           <Large>Large</Large>
           <ExtraLarge>Extra Large</ExtraLarge>
         </Row>
-      </MyForm>
-    </Container>
-  )
+      </Card>
+    </MyForm>
+  </Container>
 }
 
 export default App

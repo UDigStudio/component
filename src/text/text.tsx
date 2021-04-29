@@ -9,19 +9,18 @@ export interface TextProps
   className?: string
 }
 
-export const Text: React.FunctionComponent<TextProps> = ({
-  onChange,
-  className,
-  ...props
-}: TextProps) => {
-  const change = (event: React.SyntheticEvent<HTMLInputElement>) => {
-    onChange(event.currentTarget.value)
+export const Text = React.forwardRef(
+  ({ onChange, className, ...props }: TextProps, ref) => {
+    React.useRef(ref)
+    const change = (event: React.SyntheticEvent<HTMLInputElement>) => {
+      onChange(event.currentTarget.value)
+    }
+    const componentProps: React.HTMLProps<HTMLInputElement> = {
+      type: 'text',
+      onChange: change,
+      className: classNames('input-field', className),
+      ...props
+    }
+    return <input {...componentProps} />
   }
-  const componentProps: React.HTMLProps<HTMLInputElement> = {
-    type: 'text',
-    onChange: change,
-    className: classNames('input-field', className),
-    ...props
-  }
-  return <input {...componentProps} />
-}
+)
