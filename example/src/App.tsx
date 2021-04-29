@@ -10,6 +10,7 @@ import {
   Large,
   Medium,
   Container,
+  Navigation,
   FormHoc,
   Card,
 } from 'component'
@@ -28,6 +29,14 @@ const MyForm = FormHoc<{
 
 const App = () => {
   return <Container>
+    <Navigation
+      logo='CarMin'
+      rightNav={[
+        <a href='#'>Button Four</a>,
+        <a href='#'>Button Five</a>,
+        <a href='#'>Button Six</a>
+      ]}
+    />
     <ExampleComponent text={"Create React Library Example 😄"} />
     <MyForm>
       <Card>
