@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Container } from '../container/container'
+import { Search } from '../search/search'
 import styles from './hero-image-layout.module.css'
 
 export interface HeroImageLayoutProps {
@@ -13,18 +14,15 @@ export const HeroImageLayout = ({
   header,
   children
 }: HeroImageLayoutProps) => {
-  const heroImageStyle = React.useMemo(
-    () => ({
-      background: image
-    }),
-    [image]
-  )
   return (
     <div>
-      <div style={heroImageStyle} className={styles.heroImage} />
+      <img src={image} className={styles.heroImage} />
       <Container>
-        {header}
-        {children}
+        <div>{header}</div>
+        <div className='section'>
+          <Search />
+        </div>
+        <div className='section'>{children}</div>
       </Container>
     </div>
   )

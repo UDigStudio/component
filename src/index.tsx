@@ -9,6 +9,7 @@ export const ExampleComponent = ({ text }: Props) => {
   return <div className={styles.test}>Example Component: {text}</div>
 }
 
+export { Button } from './button/button'
 export { Text } from './text/text'
 export { Select } from './select/select'
 export { Row } from './grid/row'
