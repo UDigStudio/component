@@ -9,6 +9,7 @@ export const ExampleComponent = ({ text }: Props) => {
   return <div className={styles.test}>Example Component: {text}</div>
 }
 
+export { Button } from './button/button'
 export { Text } from './text/text'
 export { Select } from './select/select'
 export { Row } from './grid/row'
@@ -17,6 +18,7 @@ export { Medium } from './grid/medium'
 export { Large } from './grid/large'
 export { ExtraLarge } from './grid/extra-large'
 export { Container } from './container/container'
+export { HeroImageLayout } from './layout/hero-image-layout'
 export { Navigation } from './navigation/navigation'
 export { Card } from './card/card'
 export { FormHoc } from './form/form'

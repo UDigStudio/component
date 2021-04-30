@@ -3,7 +3,7 @@ import 'materialize-css/dist/css/materialize.css'
 import { ParentComponent } from '../types/parent-component'
 
 export interface ContainerProps extends ParentComponent {
-  children?: React.ReactNode | React.ReactNode[]
+  children?: React.ReactNode
 }
 
 export const Container: React.FunctionComponent<ContainerProps> = ({
