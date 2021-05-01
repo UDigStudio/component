@@ -6,4 +6,4 @@ export interface ExtraLargeProps extends ParentComponent {}
 
 export const ExtraLarge: React.FunctionComponent<ExtraLargeProps> = ({
   children
-}: ExtraLargeProps) => <div className='col s12 m10 l8'>{children}</div>
+}: ExtraLargeProps) => <div className='col s12 m12 l12'>{children}</div>
