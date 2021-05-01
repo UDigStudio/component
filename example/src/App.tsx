@@ -63,6 +63,9 @@ const App = () => {
           </Row>
           <Row>
             <Small>Small</Small>
+            <Small>Small</Small>
+            <Small>Small</Small>
+            <Medium>Medium</Medium>
             <Medium>Medium</Medium>
             <Large>Large</Large>
             <ExtraLarge>Extra Large</ExtraLarge>
