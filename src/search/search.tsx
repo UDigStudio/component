@@ -3,7 +3,7 @@ import { Text } from '../text/text'
 import { Row } from '../grid/row'
 import { Button } from '../button/button'
 
-export const Search = () => {
+export const Search: React.FunctionComponent = () => {
   const [search, setSearch] = React.useState('')
   return (
     <Row>
