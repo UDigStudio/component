@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import * as React from 'react'
-import styles from './navigation.module.css'
+import './navigation.css'
 export interface NavigationProps {
   logo: React.ReactNode
   rightNav?: React.ReactNode | React.ReactNode[]
@@ -12,7 +12,7 @@ export const Navigation: React.FunctionComponent<NavigationProps> = ({
 }: NavigationProps) => (
   <nav>
     <div className='nav-wrapper'>
-      <a href='#' className={classNames(styles.logoText, 'brand-logo')}>
+      <a href='#' className={classNames('logo-text', 'brand-logo')}>
         {logo}
       </a>
       <ul id='nav-mobile' className='right hide-on-med-and-down'>

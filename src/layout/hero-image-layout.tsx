@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Container } from '../container/container'
 import { Search } from '../search/search'
-import styles from './hero-image-layout.module.css'
 
 export interface HeroImageLayoutProps {
   header?: React.ReactNode
@@ -16,7 +15,16 @@ export const HeroImageLayout = ({
 }: HeroImageLayoutProps) => {
   return (
     <div>
-      <img src={image} className={styles.heroImage} />
+      <img
+        src={image}
+        style={{
+          width: '100%',
+          position: 'absolute',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'auto',
+          zIndex: -1
+        }}
+      />
       <Container>
         <div>{header}</div>
         <div className='section'>
