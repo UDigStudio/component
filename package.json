@@ -6,7 +6,6 @@
   "license": "MIT",
   "repository": "UDigStudio/component",
   "main": "dist/index.js",
-  "module": "dist/index.modern.js",
   "engines": {
     "node": ">=10"
   },

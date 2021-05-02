@@ -5,7 +5,7 @@ require('materialize-css/dist/css/materialize.css');
 var classNames = _interopDefault(require('classnames'));
 var reactHookForm = require('react-hook-form');
 
-var styles = {"test":"_styles-module__test__3ybTi"};
+var styles = {"test":"_3ybTi"};
 
 function _extends() {
   _extends = Object.assign || function (target) {
