@@ -1,6 +1,5 @@
 import classNames from 'classnames'
 import * as React from 'react'
-import styles from './select.module.css'
 import 'materialize-css/dist/css/materialize.css'
 
 export interface SelectOption {
@@ -28,7 +27,10 @@ export const Select = React.forwardRef(
     const [showOptions, setShowOptions] = React.useState<boolean>(false)
     return (
       <div
-        className={classNames(styles.relative, className)}
+        style={{
+          position: 'relative'
+        }}
+        className={className}
         onClick={() => setShowOptions(!showOptions)}
       >
         <div className='select-wrapper'>
@@ -39,9 +41,21 @@ export const Select = React.forwardRef(
             value={props.value || props.placeholder}
           />
           <ul
-            className={classNames('dropdown-content', 'select-dropdown', {
-              [styles.open]: showOptions
-            })}
+            className={classNames('dropdown-content', 'select-dropdown')}
+            style={
+              showOptions
+                ? {
+                    display: 'block',
+                    left: '0px',
+                    top: '0px',
+                    width: '100%',
+                    maxHeight: '200px',
+                    transformOrigin: '0px 0px',
+                    opacity: 1,
+                    transform: 'scaleX(1) scaleY(1)'
+                  }
+                : {}
+            }
           >
             {options.map(({ value, label, disabled }) => (
               <li
