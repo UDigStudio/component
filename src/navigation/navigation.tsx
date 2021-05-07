@@ -10,7 +10,7 @@ export const Navigation: React.FunctionComponent<NavigationProps> = ({
   logo,
   rightNav
 }: NavigationProps) => (
-  <nav className='transparent'>
+  <nav className='transparent z-depth-0'>
     <div className='nav-wrapper'>
       <a href='#' className={classNames('logo-text', 'brand-logo')}>
         {logo}
