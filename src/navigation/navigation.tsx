@@ -10,9 +10,16 @@ export const Navigation: React.FunctionComponent<NavigationProps> = ({
   logo,
   rightNav
 }: NavigationProps) => (
-  <nav>
+  <nav className={classNames('transparent', 'z-depth-0')}>
     <div className='nav-wrapper'>
-      <a href='#' className={classNames('logo-text', 'brand-logo')}>
+      <a
+        href='#'
+        className={classNames('logo-text', 'brand-logo', 'h1')}
+        style={{
+          textShadow: '2px 3px 12px',
+          fontWeight: 700,
+        }}
+      >
         {logo}
       </a>
       <ul id='nav-mobile' className='right hide-on-med-and-down'>

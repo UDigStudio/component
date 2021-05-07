@@ -196,11 +196,17 @@ const HeroImageLayout = ({
 const Navigation = ({
   logo,
   rightNav
-}) => createElement("nav", null, createElement("div", {
+}) => createElement("nav", {
+  className: classNames('transparent', 'z-depth-0')
+}, createElement("div", {
   className: 'nav-wrapper'
 }, createElement("a", {
   href: '#',
-  className: classNames('logo-text', 'brand-logo')
+  className: classNames('logo-text', 'brand-logo', 'h1'),
+  style: {
+    textShadow: '2px 3px 12px',
+    fontWeight: 700
+  }
 }, logo), createElement("ul", {
   id: 'nav-mobile',
   className: 'right hide-on-med-and-down'

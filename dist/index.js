@@ -242,11 +242,17 @@ var HeroImageLayout = function HeroImageLayout(_ref) {
 var Navigation = function Navigation(_ref) {
   var logo = _ref.logo,
       rightNav = _ref.rightNav;
-  return React.createElement("nav", null, React.createElement("div", {
+  return React.createElement("nav", {
+    className: classNames('transparent', 'z-depth-0')
+  }, React.createElement("div", {
     className: 'nav-wrapper'
   }, React.createElement("a", {
     href: '#',
-    className: classNames('logo-text', 'brand-logo')
+    className: classNames('logo-text', 'brand-logo', 'h1'),
+    style: {
+      textShadow: '2px 3px 12px',
+      fontWeight: 700
+    }
   }, logo), React.createElement("ul", {
     id: 'nav-mobile',
     className: 'right hide-on-med-and-down'
