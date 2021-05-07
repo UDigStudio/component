@@ -5,7 +5,7 @@ require('materialize-css/dist/css/materialize.css');
 var classNames = _interopDefault(require('classnames'));
 var reactHookForm = require('react-hook-form');
 
-var styles = {"test":"_styles-module__test__3ybTi"};
+var styles = {"test":"_3ybTi"};
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -242,7 +242,9 @@ var HeroImageLayout = function HeroImageLayout(_ref) {
 var Navigation = function Navigation(_ref) {
   var logo = _ref.logo,
       rightNav = _ref.rightNav;
-  return React.createElement("nav", null, React.createElement("div", {
+  return React.createElement("nav", {
+    className: 'transparent'
+  }, React.createElement("div", {
     className: 'nav-wrapper'
   }, React.createElement("a", {
     href: '#',
