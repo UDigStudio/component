@@ -217,7 +217,8 @@ var Search = function Search() {
     }
   }, React.createElement(Text, {
     style: {
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      paddingLeft: '0.5em'
     },
     value: search,
     onChange: setSearch
