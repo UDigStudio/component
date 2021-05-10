@@ -135,7 +135,11 @@ var Select = React.forwardRef(function (_ref, ref) {
           setShowOptions(false);
         }
       }
-    }, React.createElement("span", null, label));
+    }, React.createElement("span", {
+      style: {
+        color: disabled ? '#B2B2B2' : '#FC8135'
+      }
+    }, label));
   })), React.createElement("svg", {
     className: 'caret',
     height: '24',

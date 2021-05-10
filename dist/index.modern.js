@@ -95,7 +95,11 @@ const Select = forwardRef(({
         setShowOptions(false);
       }
     }
-  }, createElement("span", null, label)))), createElement("svg", {
+  }, createElement("span", {
+    style: {
+      color: disabled ? '#B2B2B2' : '#FC8135'
+    }
+  }, label)))), createElement("svg", {
     className: 'caret',
     height: '24',
     viewBox: '0 0 24 24',
