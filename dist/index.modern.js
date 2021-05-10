@@ -158,7 +158,12 @@ const Container = ({
 const Search = () => {
   const [search, setSearch] = useState('');
   return createElement(Row, null, createElement("div", {
-    className: 'col s10'
+    className: 'col s10',
+    style: {
+      paddingLeft: '0px',
+      paddingRight: '0px',
+      width: '90%'
+    }
   }, createElement(Text, {
     style: {
       backgroundColor: 'white'
@@ -166,8 +171,17 @@ const Search = () => {
     value: search,
     onChange: setSearch
   })), createElement("div", {
-    className: 'col s2'
+    className: 'col',
+    style: {
+      paddingRight: '0px',
+      float: 'right'
+    }
   }, createElement(Button, {
+    style: {
+      float: 'right',
+      backgroundColor: '#FC8135',
+      height: '45px'
+    },
     onClick: () => {}
   }, "Search")));
 };
@@ -204,7 +218,7 @@ const Navigation = ({
   href: '#',
   className: classNames('logo-text', 'brand-logo', 'h1'),
   style: {
-    textShadow: '2px 3px 12px',
+    textShadow: '2px 3px 16px #CDE3FB',
     fontWeight: 700
   }
 }, logo), createElement("ul", {

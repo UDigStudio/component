@@ -205,7 +205,12 @@ var Search = function Search() {
       setSearch = _React$useState[1];
 
   return React.createElement(Row, null, React.createElement("div", {
-    className: 'col s10'
+    className: 'col s10',
+    style: {
+      paddingLeft: '0px',
+      paddingRight: '0px',
+      width: '90%'
+    }
   }, React.createElement(Text, {
     style: {
       backgroundColor: 'white'
@@ -213,8 +218,17 @@ var Search = function Search() {
     value: search,
     onChange: setSearch
   })), React.createElement("div", {
-    className: 'col s2'
+    className: 'col',
+    style: {
+      paddingRight: '0px',
+      "float": 'right'
+    }
   }, React.createElement(Button, {
+    style: {
+      "float": 'right',
+      backgroundColor: '#FC8135',
+      height: '45px'
+    },
     onClick: function onClick() {}
   }, "Search")));
 };
@@ -250,7 +264,7 @@ var Navigation = function Navigation(_ref) {
     href: '#',
     className: classNames('logo-text', 'brand-logo', 'h1'),
     style: {
-      textShadow: '2px 3px 12px',
+      textShadow: '2px 3px 16px #CDE3FB',
       fontWeight: 700
     }
   }, logo), React.createElement("ul", {
