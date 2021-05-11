@@ -72,7 +72,7 @@ export const Select = React.forwardRef(
                   }
                 }}
               >
-                <span>{label}</span>
+                <span style={{color: disabled ? '#B2B2B2' : '#FC8135'}}>{label}</span>
               </li>
             ))}
           </ul>

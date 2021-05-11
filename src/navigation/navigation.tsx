@@ -16,7 +16,7 @@ export const Navigation: React.FunctionComponent<NavigationProps> = ({
         href='#'
         className={classNames('logo-text', 'brand-logo', 'h1')}
         style={{
-          textShadow: '2px 3px 12px',
+          textShadow: '2px 3px 16px #CDE3FB',
           fontWeight: 700,
         }}
       >
